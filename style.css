@@ -1,0 +1,270 @@
+/* Загальний стиль */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Навігація */
+.navbar {
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+/* Логотип у меню */
+.logo-link {
+    margin-right: auto; /* Логотип вирівнюється ліворуч */
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo {
+    width: 40px; /* Фіксована ширина логотипа */
+    height: auto; /* Пропорційне масштабування */
+    margin-right: 15px; /* Відступ від наступного елемента */
+}
+
+.navbar a {
+    color: #000;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #ff6a00;
+}
+
+/* Заголовок */
+header {
+    background: linear-gradient(to right, #FF4500, #FFA500);
+    color: #fff;
+    text-align: center;
+    padding: 50px 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+}
+
+header p {
+    margin: 10px 0 0;
+    font-size: 1.2em;
+}
+
+/* Секції */
+.section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 2.5em;
+    color: #FF8C00;
+}
+
+.section p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* Сітка товарів */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Контейнер для каруселі */
+.carousel-container {
+    width: 70%; /* Трохи більша ширина */
+    max-width: 400px; /* Максимальна ширина */
+    margin: 0 auto; /* Центрування каруселі */
+    overflow: hidden; /* Приховує частини слайдів за межами вікна */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Вікно каруселі */
+.carousel {
+    display: flex;
+    animation: slide-animation 9s infinite;
+}
+
+/* Окремий слайд */
+.slide {
+    text-align: center;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+/* Посилання для зображень */
+.carousel a {
+    display: block;
+    flex-shrink: 0; /* Забезпечує, що розмір не змінюється */
+    width: 100%;
+}
+
+.carousel img {
+    width: 100%; /* Займає всю ширину посилання */
+    height: auto; /* Масштабується автоматично */
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    cursor: pointer; /* Вказівник миші змінюється на руку */
+}
+
+/* Підписи під зображеннями */
+.caption {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* Анімація для каруселі */
+@keyframes slide-animation {
+    0%, 20% {
+        transform: translateX(0);
+    }
+    25%, 45% {
+        transform: translateX(-100%);
+    }
+    50%, 70% {
+        transform: translateX(-200%);
+    }
+    75%, 100% {
+        transform: translateX(0);
+    }
+}
+
+/* Ефект при наведенні */
+.carousel img:hover {
+    transform: scale(1.1); /* Легке збільшення при наведенні */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Тінь при наведенні */
+}
+
+/* Google Maps */
+.map iframe {
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Соціальні іконки */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icon {
+    color: #FF8C00;
+    font-size: 1.5em;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #A0522D;
+    transform: scale(1.2);
+}
+
+/* Footer */
+footer {
+    background: #763405;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+}
+
+/* Загальні стилі для секцій */
+section {
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 800px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Заголовки секцій */
+section h2 {
+    text-align: center;
+    color: #FF8C00;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Текстові параграфи */
+section p {
+    color: #555;
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+/* Статистика у секції "Про нас" */
+.about-stats {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.about-stats div {
+    background-color: #FF8C00;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Історичні блоки */
+.history-item {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #fff;
+    border-left: 5px solid #FF8C00;
+    border-radius: 5px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.history-item h3 {
+    font-size: 1.5em;
+    color: #FF8C00;
+    margin-bottom: 10px;
+}
+
+.history-item p {
+    font-size: 1.1em;
+    color: #555;
+    margin: 0;
+}
+
+/* Адаптація для мобільних пристроїв */
+@media (max-width: 768px) {
+    .about-stats {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .about-stats div {
+        font-size: 1.1em;
+        padding: 15px;
+    }
+
+    section {
+        padding: 15px;
+    }
+}
+
